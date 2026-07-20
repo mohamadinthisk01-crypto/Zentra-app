@@ -5211,10 +5211,7 @@ rootEl.render(<ZentraApp />);
     var src = document.getElementById("app-source").textContent;
     var result = Babel.transform(src, {
       sourceType: "script",
-      presets: [
-        ["env", { targets: { browsers: ["last 2 versions"] }, modules: "commonjs" }],
-        "react"
-      ],
+      presets: ["react"],
       plugins: [
         "transform-optional-chaining",
         "transform-nullish-coalescing-operator",
